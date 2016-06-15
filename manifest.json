@@ -1,0 +1,6 @@
+{
+  "name": "chart-size",
+  "short_name": "chart-size",
+  "start_url": "/",
+  "display": "standalone"
+}
