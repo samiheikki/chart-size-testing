@@ -8,16 +8,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="/manifest.json">
   <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-  <!--<link rel="import" href="/src/demo-viewer.html">-->
   <link rel="import" href="/bower_components/vaadin-charts/vaadin-flags-chart.html">
   <link rel="import" href="/src/chart-a.html">
   <link rel="import" href="/src/chart-b.html">
-</head>
+  <link rel="import" href="/src/demo-viewer.html">
+  <link rel="import" href="/src/flex-box-error.html">
 
+  <style media="screen">
+    .elements-section {
+      padding: 3.7rem 0 3rem 0;
+    }
+    #wrapper {
+      max-width: 966px;
+    }
+  </style>
+</head>
 <body>
   <chart-a></chart-a>
   <br/>
   <chart-b></chart-b>
+  <div id="wrapper">
+    <div class="elements-section">
+      <demo-viewer></demo-viewer>
+    </div>
+  </div>
+  <flex-box-error></flex-box-error>
 </body>
 
 </html>

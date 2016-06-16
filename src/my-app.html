@@ -1,0 +1,71 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/vaadin-charts/vaadin-line-chart.html">
+<dom-module id="my-app">
+  <template>
+    <vaadin-line-chart>
+      <data-series name="Total population">
+        <data>
+          <template is="dom-repeat" items="{{series}}" as="serie">
+            <point>
+              <y>{{serie.count}}</y>
+              <name>{{serie.val}}</name>
+            </point>
+          </template>
+        </data>
+      </data-series>
+    </vaadin-line-chart>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: 'my-app',
+    properties: {
+      series: {
+        type: Object,
+        value: function() {
+          return [{
+            "val": "Eastover, Charlotte, NC",
+            "count": 686,
+            "x": 1099729.137026239
+          }, {
+            "val": "Foxcroft, Charlotte, NC",
+            "count": 54,
+            "x": 1020990.1851851852
+          }, {
+            "val": "Myers Park, Charlotte, NC",
+            "count": 3448,
+            "x": 850657.2882830626
+          }, {
+            "val": "Wendover-Sedgewood, Charlotte, NC",
+            "count": 532,
+            "x": 754350.0939849624
+          }, {
+            "val": "Dilworth, Charlotte, NC",
+            "count": 2,
+            "x": 668370.5
+          }, {
+            "val": "Cotswold, Charlotte, NC",
+            "count": 442,
+            "x": 620509.2511312218
+          }, {
+            "val": "Freedom Park, Charlotte, NC",
+            "count": 142,
+            "x": 585164.1056338028
+          }, {
+            "val": "Barclay Downs, Charlotte, NC",
+            "count": 874,
+            "x": 470035.9176201373
+          }, {
+            "val": "Madison Park, Charlotte, NC",
+            "count": 1,
+            "x": 443229.0
+          }, {
+            "val": "Providence Park, Charlotte, NC",
+            "count": 24,
+            "x": 142333.16666666666
+          }];
+        }
+      }
+    }
+  });
+</script>
